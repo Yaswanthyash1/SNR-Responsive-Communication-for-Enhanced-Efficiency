@@ -1,5 +1,5 @@
 
-ABSTRACT : 
+## ABSTRACT : 
 
 Wireless communication systems face many challenges due to fluctuating channel conditions
 which lead to variable error rates and require robust error management tactics. Normal Automatic Repeat Request (ARQ) methods suffer from high communication overhead and latency
@@ -12,7 +12,7 @@ maintaining optimal complexity.
 
 
 
-INTRODUCTION :
+## INTRODUCTION :
 
 Error control mechanisms play a crucial role in reliable data transmission. It ensures the retransmission of data
 packets that are found to be erroneous or lost during the transmission. The end-to-end transfer of data from
@@ -31,19 +31,35 @@ schemes at every stage of data transmission will undoubtedly result in significa
 across all scenarios.
 
 
-DESIGN AND IMPLIMENTATION :
+## DESIGN AND IMPLIMENTATION :
 
 The proposed method focuses on improving communication efficiency by developing an adaptive Hybrid Automatic Repeat Request (HARQ) scheme. This scheme dynamically adapts to different schemes based on the
 real-time fluctuations in signal-to-noise ratio (SNR) values. When SNR is very low, it switches to robust turbo codes for error correction with HARQ. Conversely, when SNR is moderate to high, it employs HARQ with BCH codes of different code rates Notably, when the SNR reaches an extremely high value, the scheme strategically switches back to pure ARQ to maintain simplicity. The scheme operates in four states: Pure ARQ withGo-back-N, two enhanced BCH codes HARQ1(4599,3447)  and HARQ2(4599,2295), and an optimal state using HARQ with Turbo codes.
 
 Below four steps are used in the design and implimentation . 
 
-A. SNR Estimation Algorithm
-B. Throughput of Different Schemes
-C. Switching Scheme
-D. Decision Making for Soft Combining at Receiver End
+- ### SNR Estimation Algorithm
+- ### Throughput of Different Schemes
+- ### Switching Scheme
+- ### Decision Making for Soft Combining at Receiver End
 
-( detailed  information is in finalpdf ) 
+( detailed  information is in final.pdf ) 
+
+## RESULTS & ANALYSIS
+
+## CONCLUSION AND FUTURE WORKS 
+In this paper, we have developed a SNR responsive scheme that switches between ARQ and HARQ using BCH
+and turbo coding. Additionally, we’ve integrated a selective soft combining method for improved performance.
+The strategic utilization of turbo codes under very low SNR conditions, coupled with BCH codes in other
+scenarios, strikes an optimal balance between cost-effectiveness and reliability.As soft combining is selectively
+avoided under good channel conditions, the associated complexity overhead is minimized and also improves
+performance and maximizes throughput. The proposed scheme’s effectiveness is validated through simulation
+results using turbo coding and selective soft combining. These results demonstrate a significant improvement
+in throughput while also reducing complexity at every level of data transmission.
+The simulations in this paper were conducted within the framework of the Land Mobile Satellite (LMS)  channel, specifically under rural conditions. Future work could involve extending these simulations to
+other communication channels and determining thresholds through comprehensive simulations. Additionally,
+simulations for thresholds in our paper are done in trail and error methods.this can be made more accurate by
+leveraging ML and deep learning schemes.
 
 
 
