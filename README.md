@@ -74,7 +74,7 @@ in throughput while also reducing complexity at every level of data transmission
 The simulations in this paper were conducted within the framework of the Land Mobile Satellite (LMS)  channel, specifically under rural conditions. Future work could involve extending these simulations to
 other communication channels and determining thresholds through comprehensive simulations. Additionally,
 simulations for thresholds in our paper are done in trail and error methods.this can be made more accurate by
-leveraging ML and deep learning schemes.
+leveraging Machine Learning and deep learning schemes.
 
 
 <hr>
