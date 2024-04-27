@@ -47,6 +47,21 @@ Below four steps are used in the design and implimentation .
 
 ## RESULTS & ANALYSIS
 
+### Transitions between various HARQ and ARQ schemes : 
+![Screenshot 2024-03-14 161922](https://github.com/Yaswanthyash1/SNR-Responsive-Communication-for-Enhanced-Efficiency/assets/147232443/dbcb996d-a0e6-47cf-8fbe-1dcf83da9a02)
+
+###  Estimated Throughput vs SNR for HARQ with Turbo codes (code rate = 1/3) :
+
+![Turbo](https://github.com/Yaswanthyash1/SNR-Responsive-Communication-for-Enhanced-Efficiency/assets/147232443/65bebe28-ff97-46fe-ad55-a1749b189b7b)
+
+### Performance comparision with and without Softcombing :
+![Screenshot 2024-03-14 210836](https://github.com/Yaswanthyash1/SNR-Responsive-Communication-for-Enhanced-Efficiency/assets/147232443/fd0caaeb-e60c-4002-a2c3-815f10764734)
+
+### Decoding Time vs SNR for Turbo Codes and BCH Codes : 
+![Screenshot 2024-03-14 215739](https://github.com/Yaswanthyash1/SNR-Responsive-Communication-for-Enhanced-Efficiency/assets/147232443/f8a23ba4-388c-455e-b08a-3171152059de)
+
+
+
 ## CONCLUSION AND FUTURE WORKS 
 In this paper, we have developed a SNR responsive scheme that switches between ARQ and HARQ using BCH
 and turbo coding. Additionally, we’ve integrated a selective soft combining method for improved performance.
@@ -62,7 +77,16 @@ simulations for thresholds in our paper are done in trail and error methods.this
 leveraging ML and deep learning schemes.
 
 
+<hr>
 
+## "Suggestions and project improvement ideas are welcomed!"
 
+## <bold>Thanks a lot,</bold><br/>
 
+ Team members : 
+
+ - C. Gnana Jyothi
+-  P. Chandana Sai Sri Hasitha
+-  N. Yaswanth
+   
 
