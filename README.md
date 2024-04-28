@@ -33,8 +33,8 @@ across all scenarios.
 
 ## DESIGN AND IMPLIMENTATION :
 
-The proposed method focuses on improving communication efficiency by developing an adaptive Hybrid Automatic Repeat Request (HARQ) scheme. This scheme dynamically adapts to different schemes based on the
-real-time fluctuations in signal-to-noise ratio (SNR) values. When SNR is very low, it switches to robust turbo codes for error correction with HARQ. Conversely, when SNR is moderate to high, it employs HARQ with BCH codes of different code rates Notably, when the SNR reaches an extremely high value, the scheme strategically switches back to pure ARQ to maintain simplicity. The scheme operates in four states: Pure ARQ withGo-back-N, two enhanced BCH codes HARQ1(4599,3447)  and HARQ2(4599,2295), and an optimal state using HARQ with Turbo codes.
+The proposed method focuses on improving communication efficiency by developing an adaptive Hybrid Automatic Repeat Request (HARQ) scheme. This scheme dynamically adapts to different schemes based on the
+real-time fluctuations in signal-to-noise ratio (SNR) values. When SNR is very low, it switches to robust turbo codes for error correction with HARQ. Conversely, when SNR is moderate to high, it employs HARQ with BCH codes of different code rates Notably, when the SNR reaches an extremely high value, the scheme strategically switches back to pure ARQ to maintain simplicity. The scheme operates in four states: Pure ARQ withGo-back-N, two enhanced BCH codes HARQ1(4599,3447)  and HARQ2(4599,2295), and an optimal state using HARQ with Turbo codes.
 
 Below four steps are used in the design and implimentation . 
 
