@@ -8,7 +8,7 @@ This underscores the need for adaptive systems that can dynamically respond to c
 between ARQ, HARQ with Bose-Chaudhuri-Hocquenghem (BCH) codes , and HARQ with
 turbo codes based on channel conditions during the transmission. Further, this scheme incorporates a selective soft combining technique by estimating SNR at the receiver end. The
 main goal is to achieve the maximum possible throughput even at very low SNR values while
-maintaining optimal complexity.
+maintaining optimal complexity .
 
 
 
