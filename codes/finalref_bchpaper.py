@@ -78,17 +78,17 @@ throughput_HARQ2_values = [throughput_HARQ(K_HARQ2, N, t_HARQ2, S, 1/(10 ** ((SN
 
 # Plotting
 plt.figure(figsize=(10, 6))
-plt.plot(SNR_dB, throughput_GBN_values, linestyle='dashdot', label='Pure GBN', color='black')
-plt.plot(SNR_dB, throughput_HARQ1_values, linestyle='dotted', label='HARQ (4599,3477)', color='black')
-plt.plot(SNR_dB, throughput_HARQ2_values, linestyle='dashed', label='HARQ (4599,2295)', color='black')
+plt.plot(SNR_dB, throughput_GBN_values, linestyle='dashdot', label='Pure GBN', color='red')
+plt.plot(SNR_dB, throughput_HARQ1_values, linestyle='dotted', label='HARQ (4599,3477)', color='blue')
+plt.plot(SNR_dB, throughput_HARQ2_values, linestyle='dashed', label='HARQ (4599,2295)', color='green')
 max_throughput_values = [max(x) for x in zip(throughput_GBN_values, throughput_HARQ1_values, throughput_HARQ2_values)]
 plt.plot(SNR_dB, max_throughput_values, linestyle='solid', label='ideal throughput', color='black')
 
 #plt.plot(SNR_dB, max(throughput_GBN_values,throughput_HARQ1_values,throughput_HARQ2_values), linestyle='solid', label='ideal throughput', color='black')
 
 plt.title('SNR Throughput Curves')
-plt.xlabel('SNR (dB)')
-plt.ylabel('Throughput')
+plt.xlabel('SNR (dB)', fontsize=17)
+plt.ylabel('Throughput',fontsize=17)
 plt.grid(False)
 plt.legend()
 plt.show()
