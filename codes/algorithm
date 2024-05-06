@@ -1,19 +1,20 @@
 ### SNR Estimation Algorithm
 
-**Input:** Received signal samples \(y_n\), number of samples \(L\)
+Input: Received signal samples y_n, number of samples L
 
-**Output:** Estimated SNR
+Output: Estimated SNR
 
 1. Compute mean and variance:
-    - Compute mean: \(\text{mean} \gets \frac{1}{L} \sum_{n=1}^{L} |y_n|\)
-    - Compute variance: \(\text{var} \gets \frac{1}{L} \sum_{n=1}^{L} (|y_n| - \text{mean})^2\)
+    - Compute mean: mean <- (1/L) * sum_{n=1}^{L} |y_n|
+    - Compute variance: var <- (1/L) * sum_{n=1}^{L} (|y_n| - mean)^2
     
 2. Compute SNR:
-    - \(\text{SNR} \gets 10 \times \log_{10}\left(\frac{|\text{mean}|^2}{2 \times \text{var}}\right)\)
+    - SNR <- 10 * log_{10}((|mean|^2) / (2 * var))
     
-3. If \(\text{SNR} < 10\) dB:
-    - Compute intermediate value: \(z \gets \text{SNR}\)
-    - Compute new SNR': \(\text{SNR'} \gets \sqrt{(z - 2.5) \times 39.2} - 7\)
-    - Return \(\text{SNR'}\)
+3. If SNR < 10 dB:
+    - Compute intermediate value: z <- SNR
+    - Compute new SNR': SNR' <- sqrt((z - 2.5) * 39.2) - 7
+    - Return SNR'
 4. Else:
-    - Return \(\text{SNR}\)
+    - Return SNR
+
