@@ -12,7 +12,7 @@ throughput = 1 / (1 + np.exp(-0.3 * (snr_linear - 2)))
 # Plotting
 plt.figure(figsize=(10, 6))
 plt.plot(snr_db[snr_db <= 4], throughput[snr_db <= 4], color='blue', linestyle='solid', label='Low SNR', linewidth=2)
-plt.plot(snr_db[snr_db > 4], throughput[snr_db > 4], color='red', linestyle='dotted', label='Moderate/High SNR', linewidth=2)
+plt.plot(snr_db[snr_db > 4], throughput[snr_db > 4], color='blue', linestyle='dotted', label='Moderate/High SNR', linewidth=2)
 plt.xticks(range(0, 18, 2), fontsize=12)
 plt.yticks(fontsize=12)
 plt.title(' ')
