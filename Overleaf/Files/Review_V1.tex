@@ -1,0 +1,405 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{soul}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage[export]{adjustbox}[2011/08/13]
+\usepackage{tabularx}
+% \usepackage{cite}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage{longtable}
+\usepackage[numbers, sort&compress]{natbib}
+% \usepackage[margin=0.8in]{geometry}
+\usepackage[a4paper, total={6in, 10in}]{geometry}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\renewcommand*\labelenumi{\theenumi)}
+
+%\usepackage[backend=bibtex,style=verbose-trad2]{biblatex}
+\usepackage[ruled,norelsize]{algorithm2e}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\makeatletter
+\newcommand{\removelatexerror}{\let\@latex@error\@gobble}
+\makeatother
+
+\date{}
+
+\begin{document}
+
+\setstretch{1.5}
+
+%-------- Covering Letter --------------
+	 	 	
+\noindent From,\\
+B R Chandavarkar,\\
+Department of Computer Science and Engineering,\\
+NITK, Surathkal, Mangalore – 575025, India.\\
+
+\vspace{0.25in}
+
+\noindent To,\\
+Umapada Pal, Chau Yuen, Jun Zhou\\
+Editors-in-Chief\\
+SN Computer Science\\
+
+\noindent Dear Sir/Madam,
+
+\begin{center}
+\textbf{Subject:} \textbf{Revised Manuscript} for SN Computer Science - Reg.
+\end{center}
+
+\noindent We submit herewith the revised manuscript  \textbf{SNCS-D-24-05329}, titled: \textbf{``SNR-Responsive Communication: Turbo Codes and BCH in a Dynamic HARQ Scheme for Enhanced Efficiency''}. 
+
+\vspace{0.25in}
+
+\noindent We appreciate the valuable comments and constructive suggestions of the reviewers and have accordingly incorporated the same. We sincerely believe that this revised manuscript will be able to address all the issues raised during the review process.
+
+\vspace{0.25in}
+
+\noindent Thanking you. \\
+
+\noindent Yours faithfully \\ 
+
+\noindent B R Chandavarkar \\
+
+\vspace{0.25in}
+ 
+\noindent \textbf{Encl:} Responses to Reviewers Comments
+
+% ----------------- End -----------------------
+
+\newpage
+
+\noindent \textbf{Responses to  Reviewer \#1 Comments}
+
+\vspace{0.25in}
+
+\noindent \textbf{Manuscript Title:} SNR-Responsive Communication: Turbo Codes and BCH in a Dynamic HARQ Scheme for Enhanced Efficiency  \\
+
+\noindent \textbf{Manuscript Id:} SNCS-D-24-05329 \\
+
+
+% 1
+\begin{enumerate}
+
+% 2
+
+{\color{blue} \item \textbf{Comment-1:} The literature survey is very poor. The reviewer is confused regarding the category of this paper. It should be a technical paper, but it looks like a review paper. Moreover, the literature survey should be more comprehensive and it should reflect the literature gap very clearly.}
+
+\textbf{Response:} We appreciate the reviewer’s suggestions. Accordingly, we have updated Section 2 (Literature Survey) to provide a more comprehensive overview of recent advancements in HARQ techniques. Specifically, we have included the following updates: Faisal Nadeem et al. (2021) [16] proposed non-orthogonal HARQ for URLLC,  Zheng Shi et al. (2022) [17] presented energy-efficient optimizations for HARQ schemes, Chia-Hung Yeh et al. (2023) [18] introduced adaptive HARQ with reinforcement learning, and Uyoata E. Uyoata et al. (2024) [19] focused on data recovery loops in 6G networks. These additions (Sections 2.4–2.7, Page No. 8-9) ensure that the literature survey accurately reflects the latest developments in the field.
+
+Furthermore, we have included a comparison table (Table 1, Page No. 9-10) that outlines the common research gaps in various approaches, such as the difficulties in balancing complexity and throughput, as well as their dependency on intensive computations and additional resources. 
+
+
+% 2
+{\color{blue} \item \textbf{Comment-2:} There are lots of equations presented in the manuscript, but no proper citation of those equations/mathematical models has been shown.}
+
+\textbf{Response:} We have acknowledged the reviewer's suggestion and updated the revised manuscript to incorporate proper citations and detailed explanations for all equations included in the paper (Eq.1– Eq.19). We have included the required references to explain the origin and derivation of the equations.
+
+
+
+% 3
+{\color{blue} \item \textbf{Comment-3:} The author should establish the performance of the proposed technique.} 
+
+\textbf{Response:} We thank the reviewer for this valuable suggestion. Accordingly, we have updated Section 4 (Results and Analysis) with a detailed analysis of throughput improvement obtained from D-HARQ simulations performed in the Land Mobile and Satellite (LMS) channel, focusing on rural and suburban environments. The results, depicted in throughput vs. SNR graphs (Figures 10 and 11) and the throughput improvement using the Soft Combining technique (Figure 12), demonstrate the performance of the proposed technique. The updated analysis is provided in the paper as follows :
+
+Figure 10 demonstrates the performance benefits of implementing an adaptive HARQ strategy within the SNR range of 3.47 dB to 9 dB, compared to a traditional GBN approach. Adopting the D-HARQ method in this specific SNR interval substantially increases throughput, achieving a gain of approximately  $2.16\times 10^{16}$ times. Moreover, Figure 10 highlights the enhanced throughput achieved by utilizing two different states of HARQ, each configured with BCH codes of varying code rates. Transitioning from HARQ state 2 to HARQ state 1 within the SNR range of 6.68 to 12.89 dB enhances throughput by 31.67\%. The simulation curve convincingly confirms the D-HARQ model's suggestion to transition from HARQ to ARQ at higher SNR values. This curve indicates the need for such a switch, focusing on a significant improvement of roughly 28.5\% in throughput above 12.89 dB. The primary issue seen in Figure 10 is that negligible throughput approaches nil in the 0 to 3.47dB range. This D-HARQ model successfully avoids this by adapting HARQ with turbo codes in this range.
+Figure 11 shows considerable throughput even at low SNR values, Thus an improvement in throughput from 0 to 0.467 bpcu by adapting turbo codes. 
+
+\end{enumerate}
+
+\newpage
+
+%---------------------------------------------------------
+
+\noindent \textbf{Responses to Reviewer \#2 Comments}
+
+\vspace{0.25in}
+
+\noindent \textbf{Manuscript Title:} SNR-Responsive Communication: Turbo Codes and BCH in a Dynamic HARQ Scheme for Enhanced Efficiency \\
+
+\noindent \textbf{Manuscript Id:} SNCS-D-24-05329 \\
+
+\begin{enumerate}
+
+% 1
+\item {\color{blue} \textbf{Comment-1:} Provide more details on the switching criteria and thresholds used to determine when to switch between the different HARQ schemes based on SNR. The current explanation is a bit vague.}
+
+\textbf{Response:} We acknowledge the reviewer’s suggestion. In the revised manuscript, we have elaborated on the switching criteria and thresholds for the D-HARQ model in Section 3.2 (Switching Scheme, Page No. 12–14). The details are as follows:  
+
+\begin{enumerate}  
+    \item We explicitly define the thresholds for switching:  
+    \begin{itemize}  
+        \item \textbf{Threshold $\alpha_1$}: This threshold determines the transition from ARQ to HARQ1. We calculate it by equating the throughput of ARQ and HARQ1 using Eq. (9), where we derive the bit error probability $P_b$ and packet error probability $P_e$.  
+        \item \textbf{Threshold $\alpha_2$}: This threshold governs the transition from HARQ1 to HARQ2. We derive it similarly by equating the throughput of HARQ1 and HARQ2 in Eq. (11).  
+        \item \textbf{Threshold $\beta$}: This threshold governs the transition back to ARQ from HARQ1 or HARQ2 under favorable channel conditions. It depends on the absence of errors in the sliding window, where we represent it as $\beta = W$, with $W$ denoting the window size.  
+    \end{itemize}  
+    \item If the system does not receive feedback in the last sliding window, it indicates the lowest SNR conditions. In response, the system switches to turbo codes to enhance throughput under such circumstances.  
+    \item The switching mechanism dynamically adjusts based on the count of NACKs or consecutive ACKs within the sliding window. Figure 7 represents the detailed flow of the
+    \item We primarily use the thresholds \( \alpha_1 \), \( \alpha_2 \), and \( \beta \) to switch between different modes in the system. We calculate these thresholds by equating the throughput of the respective schemes, ensuring that they represent the points where the throughputs of different schemes become identical.  
+\end{enumerate}  
+
+After performing simulations under the specified LMS channel conditions, described in Section 4, we determined the numerical values for these thresholds through a trial-and-error methodology. The obtained thresholds are \( \alpha_1 = 10 \) and \( \alpha_2 = \beta = W = 64 \).  
+
+We mentioned these values in Section 4 (Results and Analysis) as follows:  
+
+Figure 10 presents a graph of the D-HARQ model, emphasizing the thresholds for transitioning between different modes. We established these thresholds using a trial-and-error methodology and conducted simulations for various sets of threshold values. Ultimately, the graph closely aligns with the ideal curve, validating the chosen threshold values when \( \alpha_1 = 10 \) and \( \alpha_2 = \beta = W = 64 \).
+
+% 2
+\item {\color{blue} \textbf{Comment-2:} Elaborate on the selective soft combining technique and how it decides which packets to combine based on SNR. The concept is introduced but more details are needed.}
+
+\textbf{Response:}  We thank the reviewer for this insightful comment. Accordingly, we have updated Section 3.5 (Page No. 16–18) of the revised manuscript to explain the selective soft combining technique. The section now elaborates on the decision-making process, including packet classification, SNR estimation using the EVM algorithm, and the conditions under which soft combining is applied or bypassed.  
+
+% 3
+\item {\color{blue} \textbf{Comment-3:} Compare the performance of D-HARQ with other adaptive HARQ schemes like those using Reed-Solomon codes or BCH codes. Quantify the throughput and latency improvements.}
+
+\textbf{Response:} We appreciate the reviewer’s insightful comment. In response, we have expanded the discussion in the results section to qualitatively compare the performance of D-HARQ with other adaptive HARQ schemes, such as those utilizing Reed-Solomon or BCH codes.
+
+While precise numerical comparisons are challenging due to the lack of explicit throughput and latency values in the literature, most existing works presented their results in graphical form—we have used the provided graphs to make qualitative assessments. For instance, the throughput vs. SNR graph in J. P. Peter Fidler et al. [13], which discusses adaptive HARQ with Reed-Solomon codes, supports the observation that D-HARQ achieves significant throughput improvements over schemes using Reed-Solomon or BCH codes.
+
+We did not include any latency optimization in our original manuscript as it is challenging to evaluate latency accurately using MATLAB simulations. In the revised manuscript, we have acknowledged this limitation in Section 5 (Future Work, Page No. 22) to clarify the scope of our work.
+
+% 4
+\item {\color{blue} \textbf{Comment-4:} Discuss the complexity and implementation overhead of D-HARQ compared to simpler HARQ schemes. Justify why the added complexity is worthwhile.} 
+
+\textbf{Response:}  We thank the reviewer for the valuable suggestion. The revised manuscript includes a detailed discussion regarding why the added complexity is worthwhile (Page No. 21). This is updated in manuscript as follows:
+
+Although D-HARQ adds complexity through dynamic switching, turbo code integration, selective soft combining, and tracking ACKs and NACKs, it justifies this complexity by delivering significant performance improvements. These features enable the system to adapt to varying channel conditions, optimize ARQ transitions, and minimize retransmissions, resulting in better throughput and resource efficiency. For instance, turbo codes increase throughput from 0 to 0.467 bpcu, as shown in Figure 11, and adaptive HARQ outperforms traditional GBN schemes in the SNR range of 3.47 dB to 9 dB, as depicted in Figure 10. Furthermore, selective soft combining is performed only when the SNR is less than 17.46 dB, resulting in more efficient resource utilization. Thus, despite the added complexity, D-HARQ provides significant benefits, particularly in difficult low-SNR environments.
+
+% 5
+\item {\color{blue} \textbf{Comment-5:} Validate the proposed scheme through more extensive simulations covering a wider range of channel conditions and traffic patterns. The current results are limited.}
+
+\textbf{Response:} We thank the reviewer for their valuable suggestion. We validated the proposed scheme through simulations conducted under LMS channel conditions, as described in Section 4. We designed these simulations to evaluate the scheme's performance under the specified environmental settings. Although we did not perform simulations in other environments, such as LTE or similar applications, due to resource constraints, the foundational principles of the scheme suggest that it can achieve similar performance in comparable environments with similar channel characteristics and traffic patterns.  
+
+% 6 
+\item {\color{blue} \textbf{Comment-6:} Proofread the manuscript carefully for typos and grammatical errors. There are a few instances that need correction.}
+
+\textbf{Response:} We appreciate the reviewer's observation. We carefully reviewed the updated manuscript, correcting all typographical and grammatical errors to increase clarity and readability.
+
+\end{enumerate}
+
+
+\newpage
+
+%--------------------------------------------------------------------
+
+\noindent \textbf{Responses to  Reviewer \#3 Comments}
+
+\vspace{0.25in}
+
+\noindent \textbf{Manuscript Title:} SNR-Responsive Communication: Turbo Codes and BCH in a Dynamic HARQ Scheme for Enhanced Efficiency \\
+
+\noindent \textbf{Manuscript Id:} SNCS-D-24-05329 \\
+
+\begin{enumerate}
+
+% 1
+{\color{blue} \item \textbf{Comment-1:} Paper is not up to the standard of scopus journal.}
+
+\textbf{Response:} In response, we have made significant efforts to enhance the quality and presentation of the manuscript to align with the standards of a Scopus-indexed journal. The manuscript has undergone extensive revision, including a detailed explanation of the proposed D-HARQ methodology, an expanded Literature Survey, and comprehensive discussions on its complexity, performance, and trade-offs.
+
+We have also introduced a detailed analysis justifying the added complexity by demonstrating substantial improvements in throughput and reliability. Furthermore, we have highlighted the innovative selective soft combining mechanism and the integration of turbo codes, showcasing their effectiveness in low SNR conditions (0–3.47 dB). To ensure clarity and rigor, we have included thorough trade-off analysis and detailed descriptions of the switching criteria in the manuscript.
+
+We also revised the manuscript's overall organization and coherence to ensure that it meets academic standards. We believe that these adjustments greatly improve its quality and make it more suitable for publication in a Scopus-indexed journal.
+
+\end{enumerate}
+\newpage
+
+%--------------------------------------------------------------------
+
+\noindent \textbf{Responses to  Reviewer \#4 Comments}
+
+\vspace{0.25in}
+
+\noindent \textbf{Manuscript Title:} SNR-Responsive Communication: Turbo Codes and BCH in a Dynamic HARQ Scheme for Enhanced Efficiency \\
+
+\noindent \textbf{Manuscript Id:} SNCS-D-24-05329 \\
+
+\begin{enumerate}
+
+% 1
+{\color{blue} \item \textbf{Comment-1:} USE OF ENGLISH: GRAMMAR FAULTS, TYPOS, ETC.\\
+retransmission by increasing the Eb/N 0 ratio.In incremental redundancy -\> retransmission by increasing the Eb/N 0 ratio. In incremental redundancy \\
+the bitstream undergoes Interleaving -\> the bitstream undergoes interleaving \\ 
+Inter leaving (Fig. 8) -\> Interleaving }
+
+\textbf{Response:} We thank the reviewer for highlighting the grammar and typographical issues. We have updated the revised manuscript to address these concerns. Specifically, we have made the following corrections:
+
+\begin{itemize}
+    \item ``retransmission by increasing the Eb/N 0 ratio.In incremental redundancy'' has been corrected to ``retransmission by increasing the Eb/N 0 ratio. In incremental redundancy.''
+    \item ``the bitstream undergoes Interleaving" has been corrected to ``the bitstream undergoes interleaving."
+    \item ``Inter leaving (Fig. 8)" has been corrected to ``Interleaving (Fig. 8)."
+\end{itemize}
+
+In addition, we carefully reviewed the updated manuscript, correcting all typographical and grammatical errors to increase clarity and readability.
+
+
+% 2
+{\color{blue} \item \textbf{Comment-2:} REFERENCES \\
+Some references are too old, but are from international journals and conferences.}
+
+\textbf{Response:} We acknowledge the review's suggestions. Accordingly, the revised manuscript's Section 2 (Literature survey) is updated (Page No. 8 - 10) with additional modern approaches proposed by authors Faisal Nadeem et al. (2021) [16], Zheng Shi et al. (2022) [17], Chia-Hung Yeh et al. (2023) [18], and Uyoata E. Uyoata et al. (2024) [19]. These updates ensure the literature survey reflects contemporary advancements, including Non-orthogonal HARQ for URLLC, energy-efficient optimization over fading channels, adaptive HARQ with reinforcement learning techniques, and data recovery loops in 6G networks.
+
+\end{enumerate}
+
+\newpage
+
+
+%--------------------------------------------------------------------
+
+\noindent \textbf{Responses to  Reviewer \#6 Comments}
+
+\vspace{0.25in}
+
+\noindent \textbf{Manuscript Title:} SNR-Responsive Communication: Turbo Codes and BCH in a Dynamic HARQ Scheme for Enhanced Efficiency \\
+
+\noindent \textbf{Manuscript Id:} SNCS-D-24-05329 \\
+
+\begin{enumerate}
+
+% 1
+{\color{blue} \item \textbf{Comment-1:} Literature survey should be more. Only few papers have been discussed in the literature survey [12-15], and all papers are also very old. Compare and contrast with some recent papers.} 
+
+\textbf{Response:} 
+
+We acknowledge the reviewer’s suggestion. Accordingly, the revised manuscript’s Section 2 (Literature survey, Page No. 8 - 10) is updated with additional modern approaches proposed by authors Faisal Nadeem et al. (2021) [16], Zheng Shi et al. (2022) [17], Chia-Hung Yeh et al. (2023) [18], and Uyoata E. Uyoata et al. (2024) [19]. These updates ensure the literature survey reflects contemporary advancements, including Non-orthogonal HARQ for URLLC, energy-efficient optimization over fading channels, adaptive HARQ with reinforcement learning techniques, and data recovery loops in 6G networks.
+
+
+Additionally, we have highlighted in the manuscript that most existing solutions involve trade-offs between complexity, generalizability, and resource constraints, as discussed in Table 1. These trade-offs need to be carefully evaluated depending on the intended application. The proposed D-HARQ, however, strikes an optimal balance between complexity and throughput by adaptively switching between schemes based on channel conditions and, importantly, requires minimal computational overhead.
+
+
+\setlength{\tabcolsep}{4pt}
+\setlength{\extrarowheight}{-2pt} % Adjust value as needed
+\renewcommand{\arraystretch}{0.5}
+
+\begin{longtable}{|>{\centering\arraybackslash}m{3.2cm}|>{\centering\arraybackslash}m{4.3cm}|>{\centering\arraybackslash}m{3.75cm}|>{\centering\arraybackslash}m{3.75cm}|}
+\caption{Comparision of different HARQ techniques} \label{tab:3} \\ \hline
+\textbf{Technique} & \textbf{Description} & \textbf{Advantages} & \textbf{Drawbacks} \\ 
+\hline
+\endfirsthead
+\hline
+\textbf{Technique} & \textbf{Description} & \textbf{Advantages} & \textbf{Drawbacks} \\ 
+\hline
+\endhead
+\hline
+\endfoot
+
+\textbf{Adaptive HARQ with Reed-Solomon (RS) Codes} & Dynamically switches between HARQ and ARQ modes based on ACKs and NACKs. & 
+\begin{itemize}
+    \item Robust and straightforward to channel fluctuations.
+    \item Swiftly adapts to noisy channels.
+\end{itemize} & 
+\begin{itemize}
+    \item Limited adaptability with only two states.
+    \item Poor scalability for complex networks.
+\end{itemize} \\ 
+\hline
+
+\textbf{Adaptive HARQ with Two RS Codes} & Employs a three-stage ARQ/HARQ1/HARQ2 scheme with different RS code rates. & 
+\begin{itemize}
+    \item Flexible and adaptable to diverse channel conditions.
+    \item Higher throughput for various error rates.
+\end{itemize} & 
+\begin{itemize}
+    \item Increased latency for real-time traffic.
+    \item Limited error correction for random errors due to RS code design.
+\end{itemize} \\ 
+\hline
+
+\textbf{Adaptive HARQ with BCH Codes} & Dynamically switches between HARQ1 and HARQ2 schemes with varying code rates. & 
+\begin{itemize}
+    \item Adapts to moderate to high error rates effectively.
+    \item Reduces latency by dynamically altering retransmission parameters.
+\end{itemize} & 
+\begin{itemize}
+    \item Ineffective under low SNR conditions.
+    \item Throughput approaches zero in poor signal environments.
+\end{itemize} \\ 
+\hline
+
+\textbf{Non-orthogonal HARQ for URLLC} & Introduces non-orthogonal retransmissions to reduce latency, enabling multiple packets to share time slots during retransmission. & 
+\begin{itemize}
+    \item Reduces latency.
+    \item Effective in high-speed applications (e.g., autonomous vehicles, industrial automation).
+\end{itemize} & 
+\begin{itemize}
+    \item Resource allocation complexities in dynamic networks.
+    \item Limited versatility for throughput optimization.
+\end{itemize} \\ 
+\hline
+
+\textbf{Energy-efficient optimization over fading channels} & Optimizes transmission powers and rates for energy efficiency while maintaining reliability in time-correlated fading channels. & 
+\begin{itemize}
+    \item Enhances energy efficiency.
+    \item Provides practical closed-form solutions for various HARQ schemes (e.g., Type I, CC, IR).
+\end{itemize} & 
+\begin{itemize}
+    \item Assumes stable fading conditions.
+    \item May reduce throughput in challenging channel environments.
+\end{itemize} \\ 
+\hline
+
+\textbf{Adaptive HARQ with reinforcement learning} & It uses machine learning to select optimal retransmission strategies based on channel quality indicators dynamically . & 
+\begin{itemize}
+    \item Adapts to real-time channel changes.
+    \item Reduces block error rates and delays compared to static HARQ mechanisms.
+\end{itemize} & 
+\begin{itemize}
+    \item High computational overhead.
+    \item Requires extensive data and resources for model training.
+\end{itemize} \\ 
+\hline
+
+\textbf{Data recovery loops in 6G networks} & Enhances coordination between physical, MAC, and higher-layer ARQ mechanisms to improve data recovery in 6G networks. & 
+\begin{itemize}
+    \item Substantial throughput gains for edge users or poor signal quality.
+    \item Effective in challenging radio conditions.
+\end{itemize} & 
+\begin{itemize}
+    \item Limited applicability to non-6G systems.
+    \item High complexity and scalability challenges in real-world implementations.
+\end{itemize} \\ 
+\hline
+
+\end{longtable}
+
+
+% 3
+{\color{blue} \item \textbf{Comment-2:} Many equations used by the author not clearly proposed where it has been derived or self written by the author ( citation is required).} 
+
+\textbf{Response:} We appreciate the reviewer’s observation. Accordingly, we have updated the revised manuscript to include proper citations and detailed explanations for all equations presented in the paper (Eq. 1 to Eq. 19). We have also included the necessary references to clarify the origin and derivation of the equations.
+
+
+% 4
+{\color{blue} \item \textbf{Comment-3:} All the parameters used in the equation should be explained for better understanding of the reader.}
+
+\textbf{Response:} We thank the reviewer for the valuable suggestion. The explanations for the parameters used in the equations were missing in some parts of Section 3.2. In the revised manuscript, we have now provided detailed explanations for all of the parameters in the equations for better understanding of the reader.
+
+
+% 5
+{\color{blue} \item \textbf{Comment-4:} After equation 10 and before 11, the equate of throughput equation is not numbered and requires proper explanation.}
+
+\textbf{Response:} We appreciate the reviewer's observations. As a result, we have clarified and appropriately numbered the throughput equation in the amended text. We have also provided the following explanation to ensure that Eq. 11 is clearly understood:  
+
+To compute the threshold \( \alpha_2 \) for switching from HARQ1 to HARQ2, we equate the throughput expressions of both schemes. We introduce additional parameters: \( K_1 \), representing the number of information symbols in HARQ1, and \( K_2 \), denoting the number of information symbols in HARQ2.  
+
+We have incorporated this updated explanation and the appropriately numbered equation into Section 3.2 (Page No. 14) of the revised manuscript.
+
+
+% 6
+{\color{blue} \item \textbf{Comment-5:} For simulation author should mention the versions of Matlab and Python software.} 
+
+\textbf{Response:} We acknowledge the reviewer for this valuable suggestion. Accordingly, we have updated the revised manuscript to specify the software versions used for simulation. We utilized MATLAB (version R2023a) and Python (version 3.10) to implement the proposed framework. We have incorporated these details in Section 4 (Results and Analysis, Page No. 18) of the revised manuscript.
+
+
+\end{enumerate}
+
+
+\end{document}
